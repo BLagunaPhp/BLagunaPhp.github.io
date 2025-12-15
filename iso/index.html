@@ -8,10 +8,13 @@
     const file = params.get('f');
 
     if (file) {
-      window.location.href =
-        'http://201.147.115.152:8080/proman/isometricos/' + file + '.pdf';
+      document.write(
+        '<meta http-equiv="refresh" content="0; url=http://201.147.115.152:8080/proman/isometricos/' +
+        file +
+        '.pdf">'
+      );
     } else {
-      document.body.innerText = 'Archivo no especificado';
+      document.write('Archivo no especificado');
     }
   </script>
 </head>
