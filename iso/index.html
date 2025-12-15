@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <title>Redirección Isométricos</title>
   <script>
-    const partes = window.location.pathname.split('/');
-    const nombre = partes[partes.length - 1];
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('f');
 
-    if (nombre && nombre !== 'iso') {
+    if (file) {
       window.location.href =
-        'http://201.147.115.152:8080/proman/isometricos/' + nombre + '.pdf';
+        'http://201.147.115.152:8080/proman/isometricos/' + file + '.pdf';
     } else {
       document.body.innerText = 'Archivo no especificado';
     }
